@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>LDA Recommender</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <script defer src="../static/script.js"></script>
+</head>
+<body class="lda-page">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="/">Book Recommender System</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="/" class="nav-button">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- LDA Section -->
+        <section id="lda-section" class="wrapper style1 special">
+            <div class="inner">
+                <header class="major">
+                    <h2>Personalized Recommendations with LDA</h2>
+                    <p>Rate these books to get personalized recommendations using the LDA engine.</p>
+                </header>
+                <div id="book-ratings" class="book-ratings">
+                    <!-- Books dynamically populated here -->
+                </div>
+                <button id="get-recommendations" class="cta-button">Get Recommendations</button>
+            </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section id="recommendations" class="wrapper style2 special" style="display: none;">
+            <div class="inner">
+                <header class="major">
+                    <h2>Recommendations</h2>
+                    <p>Your personalized recommendations are listed below:</p>
+                </header>
+                <ul id="recommendations-list">
+                    <!-- Recommendations will be dynamically populated here -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- Feedback Section -->
+        <section id="feedback" class="wrapper style3 special">
+            <div class="inner">
+                <header class="major">
+                    <h2>Provide Feedback</h2>
+                    <p>We'd love to hear your thoughts on these recommendations.</p>
+                </header>
+                <iframe
+                    src="https://docs.google.com/forms/d/e/your-google-form-id/viewform?embedded=true"
+                    width="100%"
+                    height="800"
+                    frameborder="0"
+                    marginheight="0"
+                    marginwidth="0">
+                Loading…
+                </iframe>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        populateBooks('lda');
+    </script>
+</body>
+</html>
