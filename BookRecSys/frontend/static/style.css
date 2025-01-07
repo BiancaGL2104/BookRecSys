@@ -1,0 +1,319 @@
+/* === General Styles === */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* === Page Background with Overlay === */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+body.index-page::before {
+    background-image: url('../static/images/Main.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(0.7);
+}
+
+body.lda-page::before {
+    background-image: url('../static/images/Bookstore.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(0.7);
+}
+
+body.lda-feedback-page::before {
+    background-image: url('../static/images/Feedback1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(0.7);
+}
+
+body.bert-page::before {
+    background-image: url('../static/images/Library.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(0.7);
+}
+
+body.bert-feedback-page::before {
+    background-image: url('../static/images/Feedback2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(0.7);
+}
+
+/* === Header Styles === */
+#header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#header h1 {
+    margin: 0;
+}
+
+#header h1 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-button {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+/* === Banner Section === */
+#banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+}
+
+#banner h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+#banner p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+}
+
+.actions.special {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.actions.special a {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.actions.special a:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* === Section Wrapper === */
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+}
+
+/* === Header Section === */
+.wrapper h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.wrapper p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+/* === Book Section === */
+.book-ratings {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.book {
+    max-width: 200px;
+    text-align: center;
+    color: #fff;
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.book p {
+    font-weight: bold;
+    margin: 0.8rem 0 0.5rem;
+}
+
+/* === Summary Link === */
+.book .summary-link {
+    font-size: 1rem; /* Larger text */
+    color: #FFA500; /* Bright orange for visibility */
+    text-decoration: none;
+    margin-top: 0.5rem;
+    display: block;
+    font-weight: bold;
+    text-align: center; /* Center align */
+}
+
+.book .summary-link:hover {
+    color: #FFD700; /* Bright yellow for hover */
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+/* === Star Rating === */
+.star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+    cursor: pointer;
+}
+
+.star {
+    font-size: 1.5rem;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.star.selected {
+    color: #FFD700;
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: #FFD700;
+}
+
+/* === Button Styling === */
+.cta-button {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+/* === Feedback Section === */
+.feedback-question {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.feedback-question label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.feedback-question .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.feedback-submit {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-submit:hover {
+    background-color: #c0392b;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    .book-ratings {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .book {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
