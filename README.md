@@ -41,9 +41,9 @@ BookRecSys/
 │   ├── app.py                    # Main Flask app
 │   ├── api.py                    # API endpoints
 │   ├── recommendations.py        # Recommendation logic
-|   ├── bert.py                   # BERT preprocessing
+|   ├── bert.py                   # API server for BERT system
 |   ├── bert_engine.py            # BERT recommendation engine
-│   ├── lda.py                    # LDA preprocessing
+│   ├── lda.py                    # API server for LDA system
 │   ├── lda_engine.py             # LDA recommendation engine
 │
 ├── frontend/
