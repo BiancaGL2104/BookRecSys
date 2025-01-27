@@ -43,15 +43,38 @@ The dataset contains detailed metadata and textual summaries for books, includin
 
 ## Installation and Setup
 ### Clone the Repository
+```
+git clone https://github.com/BiancaGL2104/BookRecSys.git
+cd BookRecSys
+```
 
 ### Download the Pre-trained Models 
-
+* Access the pre-trained models required for the recommendation engines from the provided .
+* Download the models and place them in a Models directory:
+```
+BookRecSys/
+│
+├── Modles/
+│   ├── similarity_matrix-2.npy
+│   └── bertopic_model
+│   └── books_bert_feautures.pickle
+```
 ### Install Dependencies
-
+Install the required libraries using:
+```
+pip install -r requirements.txt
+```
 ### Set Up Environment Variables
-
+Create a .env file in the root directory with the following keys:
+```
+GDRIVE_LINK =
+```
 ### Run the Application 
-
+* Start the main Flask app:
+```
+python backend/app.py
+```
+* Access the web application at http://127.0.0.1:5000/.
 ---
 
 ## Project Structure
