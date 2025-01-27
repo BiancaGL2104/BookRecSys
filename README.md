@@ -49,7 +49,7 @@ cd BookRecSys
 ```
 
 ### Download the Pre-trained Models 
-* Access the pre-trained models required for the recommendation engines from the provided .
+* Access the pre-trained models required for the recommendation engines from the provided [GoogleDrive Link](https://drive.google.com/drive/folders/1k5hoOW84DFjkU-2r63HGsorOjAc9d5XE?usp=share_link).
 * Download the models and place them in a Models directory:
 ```
 BookRecSys/
@@ -67,7 +67,7 @@ pip install -r requirements.txt
 ### Set Up Environment Variables
 Create a .env file in the root directory with the following keys:
 ```
-GDRIVE_LINK =
+GDRIVE_LINK = https://drive.google.com/drive/folders/1k5hoOW84DFjkU-2r63HGsorOjAc9d5XE?usp=share_link
 ```
 ### Run the Application 
 * Start the main Flask app:
