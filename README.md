@@ -1,6 +1,8 @@
 # BookRecSys
 A web-based application that allows users to rate books and receive personalized recommendations based on their ratings.
 
+---
+
 ## Features
 * **Random Book Sampling**: Displays a random selection of books from a preprocessed dataset to allow users to rate and explore.
 * **LDA Topic Modelling**: Uses Latent Dirichlet Allocation to discover topics from book summaries and classify books based on user preferences.
@@ -9,12 +11,16 @@ A web-based application that allows users to rate books and receive personalized
 * **Personalized Recommendations**: Suggests books based on cosine similarity computed from LDA topics and BERT embeddings.
 * **Feedback Collection**: Integrated Google Forms for collecting user feedback on recommendations and system performance.
 
+---
+
 ## Dataset
 The dataset contains detailed metadata and textual summaries for books, including:
 * **Book Title**: name of the book.
 * **Author**: author of the book.
 * **Description**: summary of the book.
 * **Image**: a link to the image of the cover of the book.
+
+---
 
 ## Technologies Used
 ### Frontend:
@@ -32,6 +38,21 @@ The dataset contains detailed metadata and textual summaries for books, includin
 ### Additional Tools:
 * **Google Forms**: Embedded for feedback collection.
 * **Preprocessed Dataset**: Contains clean and structured book data for efficient processing.
+
+---
+
+## Installation and Setup
+### Clone the Repository
+
+### Download the Pre-trained Models 
+
+### Install Dependencies
+
+### Set Up Environment Variables
+
+### Run the Application 
+
+---
 
 ## Project Structure
 ```
@@ -62,11 +83,16 @@ BookRecSys/
 ├── requirements.txt               # Python dependencies
 └── README.md         
 ```
+
+---
+
 ## User Instructions
 1. **Choose recommendation engine**: When landing the app, you will see two buttons with the two recommendation systems. Choose which one you want to begin with.
 2. **Rate Books**: On the rating page of the chosen system, you will see a random selection of books. Rate each book out of 5 star based on your interest.
 3. **Get Recommendations**: Submit your ratings by pressing the get recommendations button to receive personalized book recommendations.
 4. **Provide Feedback**: Share the experience using the Google Form.
+
+---
 
 ## How It Works
 ### Dataset:
@@ -83,6 +109,8 @@ BookRecSys/
 
 ### Recommendation Logic:
 * Uses cosine similarity to suggest the best-matching books for each system.
+
+---
 
 ## Future Enhancements
 * Add user authentication to save preferences and track reading history.
